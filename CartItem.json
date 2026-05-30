@@ -1,0 +1,41 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "title": "Product ID"
+    },
+    "product_name": {
+      "type": "string",
+      "title": "Product Name"
+    },
+    "product_image": {
+      "type": "string",
+      "title": "Product Image"
+    },
+    "shop_name": {
+      "type": "string",
+      "title": "Shop Name"
+    },
+    "price_per_kg": {
+      "type": "number",
+      "title": "Price per Kg"
+    },
+    "quantity_kg": {
+      "type": "number",
+      "title": "Quantity (Kg)"
+    },
+    "buyer_email": {
+      "type": "string",
+      "title": "Buyer Email"
+    }
+  },
+  "required": [
+    "product_id",
+    "product_name",
+    "price_per_kg",
+    "quantity_kg",
+    "buyer_email"
+  ]
+}

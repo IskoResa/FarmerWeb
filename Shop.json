@@ -1,0 +1,54 @@
+{
+  "name": "Shop",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Shop Name"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "story": {
+      "type": "string",
+      "title": "Our Story"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location"
+    },
+    "cover_image": {
+      "type": "string",
+      "title": "Cover Image"
+    },
+    "logo_image": {
+      "type": "string",
+      "title": "Logo Image"
+    },
+    "owner_email": {
+      "type": "string",
+      "title": "Owner Email"
+    },
+    "owner_name": {
+      "type": "string",
+      "title": "Owner Name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active",
+      "title": "Status"
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "location",
+    "owner_email",
+    "owner_name"
+  ]
+}

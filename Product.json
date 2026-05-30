@@ -1,0 +1,92 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Product Name"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Vegetables",
+        "Fruits",
+        "Dairy",
+        "Grains",
+        "Herbs",
+        "Honey & Preserves",
+        "Eggs",
+        "Meat",
+        "Baked Goods",
+        "Other"
+      ],
+      "title": "Category"
+    },
+    "price_per_kg": {
+      "type": "number",
+      "title": "Price per Kg ($)"
+    },
+    "available_kg": {
+      "type": "number",
+      "title": "Available Quantity (Kg)"
+    },
+    "availability_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Available From"
+    },
+    "estimated_delivery": {
+      "type": "string",
+      "title": "Estimated Delivery Time"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location"
+    },
+    "image": {
+      "type": "string",
+      "title": "Product Image"
+    },
+    "image2": {
+      "type": "string",
+      "title": "Additional Image"
+    },
+    "shop_id": {
+      "type": "string",
+      "title": "Shop ID"
+    },
+    "shop_name": {
+      "type": "string",
+      "title": "Shop Name"
+    },
+    "farmer_email": {
+      "type": "string",
+      "title": "Farmer Email"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "sold_out",
+        "coming_soon"
+      ],
+      "default": "available",
+      "title": "Status"
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "category",
+    "price_per_kg",
+    "available_kg",
+    "location",
+    "shop_id",
+    "shop_name",
+    "farmer_email"
+  ]
+}

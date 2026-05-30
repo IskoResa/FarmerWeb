@@ -1,0 +1,84 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "buyer_email": {
+      "type": "string",
+      "title": "Buyer Email"
+    },
+    "buyer_name": {
+      "type": "string",
+      "title": "Buyer Name"
+    },
+    "farmer_email": {
+      "type": "string",
+      "title": "Farmer Email"
+    },
+    "shop_name": {
+      "type": "string",
+      "title": "Shop Name"
+    },
+    "shop_id": {
+      "type": "string",
+      "title": "Shop ID"
+    },
+    "items": {
+      "type": "array",
+      "title": "Order Items",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "price_per_kg": {
+            "type": "number"
+          },
+          "quantity_kg": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "total_amount": {
+      "type": "number",
+      "title": "Total Amount ($)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "preparing",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "pending",
+      "title": "Status"
+    },
+    "delivery_address": {
+      "type": "string",
+      "title": "Delivery Address"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "buyer_email",
+    "buyer_name",
+    "farmer_email",
+    "shop_name",
+    "shop_id",
+    "items",
+    "total_amount"
+  ]
+}
